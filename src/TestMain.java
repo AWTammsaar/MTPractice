@@ -8,8 +8,8 @@ public class TestMain {
     public static void main(String[] args) {
         Target target = new Target();
         ArrayList<FunctionThread> threads = new ArrayList<FunctionThread>();
-        for (int i = 0; i < 5; i++) {
-            FunctionThread thread = new FunctionThread(target,"Thread nr."+i);
+        for (int i = 0; i < 16; i++) {
+            FunctionThread thread = new FunctionThread(target, "Thread nr." + i);
             threads.add(thread);
             thread.start();
         }

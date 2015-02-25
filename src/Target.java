@@ -14,13 +14,19 @@ public class Target {
                 if (value.compareAndSet(c,c)){
                     return c;
                 }
-                else continue;
+                else {
+                    System.out.println("Object value changed mid-calculation (c>b)");
+                    continue;
+                }
             }
             else{
                 if (value.compareAndSet(c,b)){
                     return b;
                 }
-                else continue;
+                else {
+                    System.out.println("Object value changed mid-calculation (c<b)");
+                    continue;
+                }
             }
         }
     }
